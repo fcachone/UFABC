@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Gaguinho
+{
+	public static void main(String[] args) {
+
+	    String frase, separado[], palavra, palavra2, silaba1, silaba2;
+	    int tSeparado;
+	    int i, j;
+	    Scanner scan = new Scanner(System.in);
+
+		frase = scan.nextLine();
+
+		separado = frase.split("\\s+");
+		tSeparado = separado.length;
+
+		for (i = 0; i < tSeparado; i++)
+		{
+		    palavra = separado[i];
+
+		    if (separado[i].length() >= 4)
+		    {
+		            if (palavra.charAt(0) == palavra.charAt(2) && palavra.charAt(1) == palavra.charAt(3))
+		            {
+		                palavra = palavra.substring(1);
+		                palavra = palavra.substring(1);
+
+		                if (i == tSeparado - 1)
+		                {
+		                    System.out.println(palavra);
+
+		                } else
+		                {
+		                    System.out.print(palavra + " ");
+		                }
+
+		            } else
+		            {
+		                if (i == tSeparado - 1)
+		                {
+		                    System.out.println(palavra);
+
+		                } else
+		                {
+		                    System.out.print(palavra + " ");
+		                }
+		            }
+		    } else
+		    {
+		        if (i == tSeparado - 1)
+		        {
+		            System.out.println(palavra);
+
+		        } else
+		        {
+		            System.out.print(palavra + " ");
+		        }
+		    }
+		}
+	}
+}

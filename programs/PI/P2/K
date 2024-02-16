@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class NomeMatricula
+{
+	public static void main(String[] args) {
+
+	    int i;
+	    String dados;
+	    StringBuffer texto = new StringBuffer(), numero = new StringBuffer();
+
+	    Scanner scan = new Scanner(System.in);
+
+	    do
+	    {
+	        texto = new StringBuffer("");
+
+	        numero = new StringBuffer ("");
+
+	        dados = scan.next();
+
+	        for (i = 0; i < dados.length(); i++)
+	        {
+	            if (Character.isDigit(dados.charAt(i)))
+	            {
+	                numero.append(dados.charAt(i));
+
+	            } else if (Character.isAlphabetic(dados.charAt(i)))
+	            {
+	                texto.append(dados.charAt(i));
+	            }
+	        }
+
+	        System.out.println(texto + " " + numero);
+
+	    } while (scan.hasNext());
+	}
+}
